@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     svg.append('text')
       .attr('transform', `translate(-6,${cellSize * 3.5})rotate(-90)`)
       .style('text-anchor', 'middle')
-      .text(d => d);
+      .text((d) => d);
 
     const rect = svg.selectAll('.day')
       .data(d => d3.timeDays(new Date(d, 0, 1), new Date(d + 1, 0, 1)))
